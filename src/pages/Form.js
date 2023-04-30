@@ -12,47 +12,53 @@ function Form() {
     }
 
     return (
-        <div class="form-container">
-            <div class="form-image">
-                <img src="/images/boy.svg" alt="Illustration of a boy" />
-            </div>
-            <form id="login-form" action="dashboard.html">
-                <div class="form-group">
-                    <label for="name">Name: </label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" class="form-control" required />
+        <>
+            <header>
+                <span style={{fontSize:"38px"}}>Welcome to Geekifixx -</span>
+                <span style={{fontSize:"32px"}}> Your Wellness Fix</span>
+            </header>
+            <div class="form-container">
+                <div class="form-image">
+                    <img src="/images/boy.svg" alt="Illustration of a boy" id='boy-image' />
                 </div>
-
-                <div class="form-group">
-                    <label for="age">Age:</label>
-                    <input type="number" id="age" name="age" class="form-control" placeholder="Enter your age (in years)" min="18" max="120" required />
-                </div>
-
-                <p><label for="gender">Gender:</label></p>
-                <div class="radio-options">
-                    <div class="floatBlock">
-                        <label for="male" id="male">Male</label>
-                        <input type="radio" name="gender" value="male" />
+                <form id="login-form" action="dashboard.html">
+                    <div class="form-group">
+                        <label for="name">Name: </label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" class="form-control" required />
                     </div>
 
-                    <div class="floatBlock">
-                        <label for="female" id="female">Female</label>
-                        <input type="radio" name="gender" value="female" />
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" class="form-control" placeholder="Enter your age (in years)" min="18" max="120" required />
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label for="occupation">Occupation:</label>
-                    <input type="text" id="occupation" name="occupation" placeholder="Enter your occupation" class="form-control" required />
-                </div>
+                    <p><label for="gender">Gender:</label></p>
+                    <div class="radio-options">
+                        <div class="floatBlock">
+                            <label for="male" id="male">Male</label>
+                            <input type="radio" name="gender" value="male" />
+                        </div>
 
-                <div class="form-group">
-                    <button type="submit" id="submit" alt="Submit">Submit</button>
+                        <div class="floatBlock">
+                            <label for="female" id="female">Female</label>
+                            <input type="radio" name="gender" value="female" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="occupation">Occupation:</label>
+                        <input type="text" id="occupation" name="occupation" placeholder="Enter your occupation" class="form-control" required />
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" id="submit" alt="Submit">Submit</button>
+                    </div>
+                </form>
+                <div className='form-image'>
+                    <img src="/images/girl.svg" alt="Illustration of a girl" id='girl-image' />
                 </div>
-            </form>
-            <div class="form-image">
-                <img src="/images/girl.svg" alt="Illustration of a girl" />
             </div>
-        </div>
+        </>
     );
 }
 

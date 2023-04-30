@@ -1,5 +1,5 @@
 body {
-    background-image: url("/public/images/background.svg");
+    background-image: url("/public/images/background2.svg");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -25,7 +25,7 @@ body {
     align-items: center;
     margin: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #577D86;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -50,7 +50,7 @@ body {
 
 .slide:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 5px #577D86;
 }
 
 .zoom img {
@@ -80,7 +80,7 @@ body {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #525252;
+    background-color: #577D86;
     color: #fff;
     font-size: 1.2rem;
     text-decoration: none;
@@ -89,7 +89,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #222222;
+    background-color: #184a50;
 }
 
 #first {
