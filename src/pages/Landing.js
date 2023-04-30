@@ -48,9 +48,11 @@ const Landing = () => {
                         Whether you're looking to reduce stress, or improve your experience while working on computers, GeekFixx has got you covered.<br/><br/>
                     </p>
                     </div>
+                        <Link to={"/form"}>
                         <div>
                             <a href="/source/form.html" class="btn">Get Started</a>
                         </div>
+                        </Link>
                 </div>
             </div>
         );
