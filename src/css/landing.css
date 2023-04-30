@@ -1,0 +1,113 @@
+.landing-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.info h1 {
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #525252;
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #222222;
+}
+
+/* CSS for slider container */
+.slider {
+    display: flex;
+    flex-wrap: nowrap;
+    /* prevent wrapping to new line */
+    overflow-x: auto;
+    /* enable horizontal scrolling */
+    width: 100%;
+    /* set the width to 100% of the parent container */
+    margin: 2rem auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slides {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.slide img {
+    width: 100px;
+    /* set the width of the image to maintain aspect ratio */
+    height: auto;
+    /* allow the height to adjust automatically */
+    margin: 7px;
+    /* add some margin to the right of the image */
+}
+
+.slide h3 {
+    margin: 0;
+    /* remove any margin from the heading */
+    padding: 0.2rem;
+    text-align: center;
+}
+
+.slide:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    /* add a box shadow */
+}
+
+.zoom img {
+    transform: scale(1.2);
+}
+
+#first {
+    font-size: 42px;
+}
+
+#second {
+    font-size: 35px;
+}
