@@ -7,7 +7,7 @@ function Navbar() {
         <div>    <div class="navbar">
             <ul class="nav-links">
                 <li>
-                    <Link to={"/"}>
+                    <Link to={"/dashboard"}>
                         <i class="fas fa-home"></i>
                         <img src="/images/favicon-32x32.png" alt="logo-img" />
                         <span>Dashboard</span>
@@ -28,7 +28,7 @@ function Navbar() {
                     </Link>
                 </li>
                 <li>
-                    <Link to={"/aboutus"}>
+                    <Link to={"/about"}>
                         <i class="fas fa-circle-question"></i>
                         <img src="/images/favicon-32x32.png" alt="logo-img" />
                         <span>About Us</span>

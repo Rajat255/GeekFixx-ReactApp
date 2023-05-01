@@ -1,0 +1,21 @@
+.about-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    margin-top: 4rem;
+    margin-left: 10%;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}

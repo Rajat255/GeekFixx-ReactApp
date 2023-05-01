@@ -2,6 +2,7 @@ body {
     background-image: url("/public/images/background2.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
 }
 
