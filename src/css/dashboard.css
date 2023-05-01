@@ -1,0 +1,263 @@
+.user-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4.68rem;
+    margin-left: 10.5%;
+    width: 42%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.user-details,
+.preferences {
+    background-color: rgba(250,
+            250,
+            250,
+            0.5);
+    /* set the background color with an alpha value to create transparency */
+    padding: 6.25rem;
+    /* add some padding to the section */
+    border-radius: 20px;
+    /* add rounded corners to the section */
+    backdrop-filter: blur(10px);
+    /* add a blur effect to the background */
+}
+
+.user-image {
+    margin-right: 10px;
+    padding: 2rem;
+}
+
+#user-info {
+    flex-grow: 1;
+    font-size: 1.2rem;
+}
+
+.user-details p {
+    margin: 5px 0;
+    padding: 15px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.form-group button {
+    background-color: #363434;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin-bottom: 20px;
+    width: 10rem;
+}
+
+.form-group button:hover {
+    background-color: #535352;
+}
+
+.form-group button:active {
+    background-color: rgb(220, 220, 220);
+}
+
+/* Preferences styles */
+
+.preferences {
+    float: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    width: 46.2%;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4.68rem;
+    margin-left: 10.5%;
+    width: 42%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.user-details,
+.preferences {
+    background-color: rgba(250,
+            250,
+            250,
+            0.5);
+    /* set the background color with an alpha value to create transparency */
+    padding: 6.25rem;
+    /* add some padding to the section */
+    border-radius: 20px;
+    /* add rounded corners to the section */
+    backdrop-filter: blur(10px);
+    /* add a blur effect to the background */
+}
+
+.user-image {
+    margin-right: 10px;
+    padding: 2rem;
+}
+
+#user-info {
+    flex-grow: 1;
+    font-size: 1.2rem;
+}
+
+.user-details p {
+    margin: 5px 0;
+    padding: 15px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.form-group button {
+    background-color: #363434;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 17px;
+    margin-top: 4.68rem;
+    margin-left: 0.75%;
+    border-radius: 20px;
+}
+
+.preference-item {
+    display: flex;
+    align-items: center;
+}
+
+.preference-icon {
+    height: 35px;
+    margin-right: 12px;
+}
+
+.preferences h2 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+/* CSS for toggles */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 74px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slide {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slide:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked+.slide {
+    background-color: #292a2a;
+}
+
+input:focus+.slide {
+    box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked+.slide:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slide.round {
+    border-radius: 34px;
+}
+
+.slide.round:before {
+    border-radius: 50%;
+}
+
+/* Styling for the toggle container */
+.preference-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.preference-icon {
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 75%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d4d4d4;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+.slider-value {
+    margin-right: 15px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #000000;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #000000;
+    cursor: pointer;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: row;
+}
