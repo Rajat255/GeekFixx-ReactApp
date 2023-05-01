@@ -5,7 +5,7 @@ import Dashboard from "./pages/Dashboard.js"
 import Statistics from "./pages/Statistics.js";
 import Achievements from './pages/Achievements.js';
 import About from "./pages/About.js";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {BrowserRouter, Routes, Router, Route} from "react-router-dom";
 
 const App = () => {
   return (
