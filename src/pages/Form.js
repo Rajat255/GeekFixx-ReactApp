@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "../css/form.css"
+import { Link } from 'react-router-dom';
 
 function Form() {
     const [name, setName] = useState('');
@@ -32,7 +33,7 @@ function Form() {
                         <input type="number" id="age" name="age" class="form-control" placeholder="Enter your age (in years)" min="18" max="120" required />
                     </div>
 
-                    <p><label for="gender">Gender:</label></p>
+                    <label for="gender">Gender:</label>
                     <div class="radio-options">
                         <div class="floatBlock">
                             <label for="male" id="male">Male</label>
@@ -51,7 +52,9 @@ function Form() {
                     </div>
 
                     <div class="form-group">
+                        <Link to={"/dashboard"}>
                         <button type="submit" id="submit" alt="Submit">Submit</button>
+                        </Link>
                     </div>
                 </form>
                 <div className='form-image'>

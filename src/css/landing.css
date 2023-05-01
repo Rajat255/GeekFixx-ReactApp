@@ -2,7 +2,8 @@ body {
     background-image: url("/public/images/background2.svg");
     background-repeat: no-repeat;
     background-size: cover;
-  }
+    height: 100vh;
+}
 
 .landing-container {
     max-width: 960px;
