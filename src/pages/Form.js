@@ -28,10 +28,6 @@ function Form() {
         e.preventDefault();
     };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-    }
-
     return (
         <>
             <header>
@@ -44,36 +40,67 @@ function Form() {
                 </div>
                 <form id="login-form" action="dashboard.html" name="formData" onSubmit={clickHandler}>
                     <div class="form-group">
-                        <label htmlFor="nasplaySelectedOptme">Name: </label>
-                        <input type="text" id="name" value={name} placeholder="Enter your name" class="form-control" onChange={inputHandler} required />
+                        <label htmlFor="name">Name: </label>
+                        <input type="text" 
+                        name='name' 
+                        placeholder="Enter your name" 
+                        class="form-control" 
+                        onChange={inputHandler} 
+                        required />
                     </div>
 
                     <div class="form-group">
                         <label htmlFor="age">Age:</label>
-                        <input type="number" id="age" name="age" class="form-control" placeholder="Enter your age (in years)" min="18" max="120" value={age} onChange={inputHandler} required />
+                        <input type="number" 
+                        name = 'age' 
+                        class="form-control" 
+                        placeholder="Enter your age (in years)" 
+                        min="18" max="120" 
+                        value={age} 
+                        onChange={inputHandler} 
+                        required />
                     </div>
 
                     <label for="gender">Gender:</label>
                     <div class="radio-options">
                         <div class="floatBlock">
                             <label htmlFor="male">Male</label>
-                            <input type="radio" name="gender" value="Male" onChange={inputHandler} />
+                            <input type="radio" 
+                            name ='gender' 
+                            value="Male" 
+                            onChange={inputHandler} />
                         </div>
 
                         <div class="floatBlock">
                             <label htmlFor="female">Female</label>
-                            <input type="radio" name="gender" value="Female" onChange={inputHandler} />
+                            <input 
+                            type="radio" 
+                            name = 'gender' 
+                            value="Female" 
+                            onChange={inputHandler} />
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label htmlFor="occupation">Occupation:</label>
-                        <input type="text" id="occupation" name="occupation" placeholder="Enter your occupation" class="form-control" value={occupation} onChange={inputHandler} required />
+                        <input 
+                        type="text" 
+                        name='occupation' 
+                        placeholder="Enter your occupation" 
+                        class="form-control" 
+                        value={occupation} 
+                        onChange={inputHandler} 
+                        required />
                     </div>
 
                     <div class="form-group">
                         <Link to={"/dashboard"}>
-                            <button type="submit" id="submit" alt="Submit" onSubmit={handleSubmit}>Submit</button>
+                            <button 
+                            type="submit" 
+                            id="submit" 
+                            alt="Submit">
+                                Submit
+                            </button>
                         </Link>
                     </div>
                 </form>

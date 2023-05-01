@@ -2,6 +2,7 @@ import React from 'react';
 import "../css/dashboard.css";
 import Navbar from '../components/Navbar';
 import Header from '../components/Header';
+import { Link } from 'react-router-dom';
 
 function Dashboard() {
     let name = localStorage.getItem("name");
@@ -15,7 +16,6 @@ function Dashboard() {
             <Navbar />
             <div className="dashboard-container">
                 <div class="user-details">
-
                     <img src="/images/id.svg" alt="user-image" class="user-image" />
                     <div id="user-info">
                         <h2>Welcome {name}!</h2>
@@ -23,7 +23,9 @@ function Dashboard() {
                         <h3>Gender: {gender}</h3>
                         <h3>Occupation: {occupation}</h3>
                         <div class="form-group">
-                            <button type="button" id="logout" alt="Logout">Logout</button>
+                            <Link to={"/form"}>
+                                <button type="button" id="logout" alt="Logout">Logout</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -39,7 +41,6 @@ function Dashboard() {
                             <input type="checkbox" />
                             <span class="slide round"></span>
                         </label>
-
                     </div>
 
                     <div class="preference-item">
@@ -95,7 +96,6 @@ function Dashboard() {
                             <input type="checkbox" id="waterToggle" onclick="setWaterReminder()" />
                             <span class="slide round"></span>
                         </label>
-
                     </div>
                 </div>
             </div>
