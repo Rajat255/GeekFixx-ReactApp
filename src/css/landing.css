@@ -21,7 +21,7 @@ body {
     overflow: hidden;
 }
 
-.slide {
+.landing-slide {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,25 +32,25 @@ body {
     cursor: pointer;
 }
 
-.slides {
+.landing-slides {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.slide img {
+.landing-slide img {
     width: 85px;
     height: auto;
     margin: 5px;
 }
 
-.slide h3 {
+.landing-slide h3 {
     margin: 0;
     padding: 0.2rem;
     text-align: center;
 }
 
-.slide:hover {
+.landing-slide:hover {
     transform: scale(1.05);
     box-shadow: 0 0 5px #577D86;
 }
