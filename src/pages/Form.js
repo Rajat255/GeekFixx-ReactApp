@@ -8,7 +8,6 @@ function Form() {
     const [occupation, setOccupation] = useState('');
     const [gender, setGender] = useState('');
 
-
     const inputHandler = (e) => {
         const { name, value } = e.target;
         localStorage.setItem(name, value);
@@ -22,7 +21,6 @@ function Form() {
             setGender(value);
         }
     };
-
 
     const clickHandler = (e) => {
         e.preventDefault();
