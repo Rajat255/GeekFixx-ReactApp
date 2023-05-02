@@ -1,14 +1,15 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import Header from '../components/Header'
+import "../css/style.css";
+import React from "react";
+import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 
 function Statistics() {
   return (
     <>
-    <Header />
-    <Navbar />
+      <Header />
+      <Navbar />
     </>
-  )
+  );
 }
 
-export default Statistics
+export default Statistics;
