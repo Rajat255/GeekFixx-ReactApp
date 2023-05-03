@@ -2,10 +2,12 @@ import "../css/style.css";
 import React from "react";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 function Dashboard() {
+  const navigate = useNavigate();
+
   let name = localStorage.getItem("name");
   let age = localStorage.getItem("age");
   let occupation = localStorage.getItem("occupation");
@@ -15,6 +17,11 @@ function Dashboard() {
 
   const handleSliderChange = (event) => {
     setSliderValue(event.target.value);
+  };
+
+  const handleLogout = () => {
+    localStorage.clear();
+    navigate("/form");
   };
 
   return (
@@ -30,11 +37,14 @@ function Dashboard() {
             <h3>Gender: {gender}</h3>
             <h3>Occupation: {occupation}</h3>
             <div class="form-group">
-              <Link to={"/form"}>
-                <button type="button" id="logout" alt="Logout">
-                  Logout
-                </button>
-              </Link>
+              <button
+                type="button"
+                id="logout"
+                alt="Logout"
+                onClick={handleLogout}
+              >
+                Logout
+              </button>
             </div>
           </div>
         </div>

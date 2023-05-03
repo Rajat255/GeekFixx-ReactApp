@@ -9,8 +9,8 @@ function About() {
     <>
       <Header />
       <Navbar />
-      <div class="about-container">
-        <div class="content">
+      <div className="about-container">
+        <div className="content">
           <h1>About Us</h1>
           <p>
             With the rise of the digital world, the amount of time people spend
@@ -32,10 +32,10 @@ function About() {
           </p>
 
           <h2>How to use the app?</h2>
-          <div class="steps-container">
+          <div className="steps-container">
             <p>You can follow the steps below to get started with GeekFixx!</p>
             <h3>Dashboard</h3>
-            <div class="steps">
+            <div className="steps">
               <ol>
                 <li></li>
                 <li></li>
@@ -46,7 +46,7 @@ function About() {
             </div>
 
             <h3>Statistics</h3>
-            <div class="steps">
+            <div className="steps">
               <ol>
                 <li></li>
                 <li></li>
@@ -57,7 +57,7 @@ function About() {
             </div>
 
             <h3>Achievements</h3>
-            <div class="steps">
+            <div className="steps">
               <ol>
                 <li></li>
                 <li></li>

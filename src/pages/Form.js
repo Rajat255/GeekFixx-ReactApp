@@ -1,5 +1,5 @@
 import "../css/style.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 function Form() {
@@ -9,6 +9,19 @@ function Form() {
   const [gender, setGender] = useState("");
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // check if required data is present in local storage
+    const name = localStorage.getItem("name");
+    const age = localStorage.getItem("age");
+    const occupation = localStorage.getItem("occupation");
+    const gender = localStorage.getItem("gender");
+
+    if (name && age && occupation && gender) {
+      // if data is present, redirect to dashboard page
+      navigate("/dashboard");
+    }
+  }, [navigate]);
 
   const inputHandler = (e) => {
     const { name, value } = e.target;
