@@ -39,8 +39,7 @@ const Landing = () => {
       </div>
       <div class="info">
         <div class="info-text">
-          <span id="first">
-            <strong>GeekFixx: </strong>
+          <span id="first">GeekFixx:
           </span>
           <span id="second"> Your Wellness Fixx</span>
           <p>
