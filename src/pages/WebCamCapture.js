@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from "react";
-import PostureDetect from "./PostureDetect";
 
-function WebCamCapture() {
+function WebCamCapture(onImageCapture) {
   const [intervalId, setIntervalId] = useState(null);
   const [video, setVideo] = useState(null);
-  const [image, setImage] = useState(null);
-  const [postureValue, setPostureValue] = useState(50);
   const [captureChecked, setCaptureChecked] = useState(false);
-
-  const handlePostureSliderChange = (event) => {
-    setPostureValue(event.target.value);
-  };
 
   const handleCaptureCheckboxChange = (event) => {
     setCaptureChecked(event.target.checked);
@@ -36,7 +29,9 @@ function WebCamCapture() {
             canvas.height = currentVideo.videoHeight;
             ctx.drawImage(currentVideo, 0, 0, canvas.width, canvas.height);
             const currentImage = canvas.toDataURL("image/png");
-            setImage(currentImage);
+            console.log(onImageCapture);
+            console.log(currentImage);
+            onImageCapture = currentImage;
           }, 5000); // capture an image every 5 seconds
           setIntervalId(currentIntervalId);
         })
@@ -50,37 +45,39 @@ function WebCamCapture() {
         video.srcObject.getTracks().forEach((track) => track.stop());
       }
     }
-  }, [captureChecked]);
+  }, [captureChecked, onImageCapture]);
 
   return (
-    <div className="preference-item">
-      <img
-        src="/images/back.svg"
-        alt="Posture icon"
-        className="preference-icon"
+    <div>
+      {/* <input
+        id="capture-checkbox"  const [postureValue, setPostureValue] = useState(50);
+  const handlePostureSliderChange = (event) => {
+    setPostureValue(event.target.value);
+  };
+        type="checkbox"
+        checked={captureChecked}
+        onChange={handleCaptureCheckboxChange}
       />
-      <h2>Posture Reminders</h2>
-      <input
-        type="range"
-        min="0"
-        max="100"
-        value={postureValue}
-        className="slider"
-        onChange={handlePostureSliderChange}
-      />
-      <span className="slider-value">{postureValue}</span>
+      <label htmlFor="capture-checkbox">Capture images</label> */}
 
-      <label className="toggle-switch">
-        <input
-          type="checkbox"
-          id="capture-checkbox"
-          checked={captureChecked}
-          onChange={handleCaptureCheckboxChange}
+      <div class="preference-item">
+        <img
+          src="/images/back.svg"
+          alt="Posture icon"
+          class="preference-icon"
         />
-        <span className="slide round"></span>
-      </label>
+        <h2>Posture Reminders</h2>
 
-      {image && <PostureDetect image={image} />}
+        <label class="toggle-switch">
+          <input
+            id="captu-checkbox"
+            type="checkbox"
+            checked={captureChecked}
+            onChange={handleCaptureCheckboxChange}
+          />
+          <span class="slide round"></span>
+        </label>
+      </div>
     </div>
   );
 }

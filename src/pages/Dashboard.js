@@ -4,7 +4,8 @@ import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect, useCallback } from "react";
-import PostureDetect from "./PostureDetect";
+import PostureDetect from "./PostureDetect.js";
+import WebCamCapture from "./WebCamCapture.js";
 
 function Dashboard() {
   // Populate after Login
@@ -22,24 +23,7 @@ function Dashboard() {
 
   //
   // Back Care/ Posture Detection...........................
-  const [postureValue, setPostureValue] = useState(50);
-  const handlePostureSliderChange = (event) => {
-    setPostureValue(event.target.value);
-  };
 
-  const [capturedImage, setCapturedImage] = useState(null);
-  const [postureStatus, setPostureStatus] = useState("Unknown");
-
-  const handlePostureDetected = (status) => {
-    setPostureStatus(status);
-    if (status !== "Unknown") {
-      showAlert(`Posture Status: ${status}`);
-    }
-  };
-
-  const showAlert = (message) => {
-    alert(message);
-  };
   //
   // Ear Care...............................................
   const [earValue, setEarValue] = useState(50);
@@ -195,30 +179,8 @@ function Dashboard() {
 
         <div class="preferences">
           <h1>Preferences</h1>
-
+          <WebCamCapture></WebCamCapture>
           {/* BackCare */}
-          <div class="preference-item">
-            <img
-              src="/images/back.svg"
-              alt="Posture icon"
-              class="preference-icon"
-            />
-            <h2>Posture Reminders</h2>
-            <input
-              type="range"
-              min="1"
-              max="100"
-              value={postureValue}
-              class="slider"
-              onChange={handlePostureSliderChange}
-            />
-            <span class="slider-value">{postureValue}</span>
-
-            <label class="toggle-switch">
-              <input type="checkbox" />
-              <span class="slide round"></span>
-            </label>
-          </div>
 
           {/* EarCare */}
           <div class="preference-item">
@@ -338,6 +300,7 @@ function Dashboard() {
               <span class="slide round"></span>
             </label>
           </div>
+          <PostureDetect></PostureDetect>
         </div>
       </div>
     </>
