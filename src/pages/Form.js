@@ -29,7 +29,7 @@ function Form() {
     return (
         <>
             <header>
-                <span style={{ fontSize: "38px" }}>Welcome to Geekifixx -</span>
+                <span style={{ fontSize: "38px" }}>Welcome to Geekfixx -</span>
                 <span style={{ fontSize: "32px" }}> Your Wellness Fix</span>
             </header>
             <div class="form-container">
