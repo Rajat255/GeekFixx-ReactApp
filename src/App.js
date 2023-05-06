@@ -1,11 +1,12 @@
-import React from 'react';
+import "./css/style.css";
+import React from "react";
 import Landing from "./pages/Landing.js";
 import Form from "./pages/Form.js";
-import Dashboard from "./pages/Dashboard.js"
+import Dashboard from "./pages/Dashboard.js";
 import Statistics from "./pages/Statistics.js";
-import Achievements from './pages/Achievements.js';
+import Achievements from "./pages/Achievements.js";
 import About from "./pages/About.js";
-import {BrowserRouter, Routes, Router, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Router, Route } from "react-router-dom";
 
 const App = () => {
   return (
@@ -18,7 +19,8 @@ const App = () => {
         <Route path="/achievements" element={<Achievements />} />
         <Route path="/about" element={<About />} />
       </Routes>
-    </BrowserRouter>  );
-}
+    </BrowserRouter>
+  );
+};
 
 export default App;

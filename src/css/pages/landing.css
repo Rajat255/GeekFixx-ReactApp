@@ -8,7 +8,8 @@ body {
 
 .landing-container {
     max-width: 960px;
-    margin: auto;
+    margin: 0 auto;
+    padding: 50px 20px;
     box-sizing: border-box;
 }
 
@@ -53,6 +54,7 @@ body {
 .landing-slide:hover {
     transform: scale(1.05);
     box-shadow: 0 0 5px #577D86;
+    font-weight: bold;
 }
 
 .zoom img {
@@ -76,6 +78,7 @@ body {
 .info p {
     font-size: 1.4rem;
     line-height: 1.5;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -95,9 +98,10 @@ body {
 }
 
 #first {
-    font-size: 40px;
+    font-size: 40pt;
+    font-weight: bold;
 }
 
 #second {
-    font-size: 34px;
+    font-size: 35pt;
 }

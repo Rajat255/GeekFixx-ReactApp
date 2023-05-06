@@ -1,42 +1,42 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import "../css/navbar.css"
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-    return (
-        <div>    <div class="navbar">
-            <ul class="nav-links">
-                <li>
-                    <Link to={"/dashboard"}>
-                        <i class="fas fa-home"></i>
-                        <img src="/images/favicon-32x32.png" alt="logo-img" />
-                        <span>Dashboard</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to={"/statistics"}>
-                        <i class="fas fa-chart-simple"></i>
-                        <img src="/images/favicon-32x32.png" alt="logo-img" />
-                        <span>Statistics</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to={"/achievements"}>
-                        <i class="fas fa-trophy"></i>
-                        <img src="/images/favicon-32x32.png" alt="logo-img" />
-                        <span>Achievements</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to={"/about"}>
-                        <i class="fas fa-circle-question"></i>
-                        <img src="/images/favicon-32x32.png" alt="logo-img" />
-                        <span>About Us</span>
-                    </Link>
-                </li>
-            </ul>
-        </div></div>
-    )
+  const activeClass = (routeName) =>
+    window.location.pathname === routeName ? "active" : "";
+
+  return (
+    <div>
+      <div className="navbar">
+        <ul className="nav-links">
+          <li>
+            <Link to={"/dashboard"} className={activeClass("/dashboard")}>
+              <i className="fas fa-home"></i>
+              <span>Dashboard</span>
+            </Link>
+          </li>
+          <li>
+            <Link to={"/statistics"} className={activeClass("/statistics")}>
+              <i className="fas fa-chart-simple"></i>
+              <span>Statistics</span>
+            </Link>
+          </li>
+          <li>
+            <Link to={"/achievements"} className={activeClass("/achievements")}>
+              <i className="fas fa-trophy"></i>
+              <span>Achievements</span>
+            </Link>
+          </li>
+          <li>
+            <Link to={"/about"} className={activeClass("/about")}>
+              <i className="fas fa-circle-question"></i>
+              <span>About Us</span>
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
 }
 
-export default Navbar
+export default Navbar;
