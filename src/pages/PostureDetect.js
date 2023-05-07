@@ -2,8 +2,8 @@ import React, { useRef, useState, useEffect, useCallback } from "react";
 import * as tf from "@tensorflow/tfjs";
 import WebCamCapture from "./WebCamCapture.js";
 
-function PostureDetect({ currentImage }) {
-  const [postureStatus, setPostureStatus] = useState(null);
+function PostureDetect({ currentImage, postureStatus, setPostureStatus }) {
+  
 
   const detect = async (net, currentImage) => {
     if (!currentImage) return;
@@ -41,23 +41,25 @@ function PostureDetect({ currentImage }) {
       "https://geekfixx-model1.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json"
     );
 
-    // Loop and detect hands
-    setInterval(() => {
-      detect(net, currentImage);
-    }, 16.7);
+    // Loop and detect hands using requestAnimationFrame()
+    const loop = async () => {
+      await detect(net, currentImage);
+      requestAnimationFrame(loop);
+    };
+    loop();
   }, [currentImage]);
 
   useEffect(() => {
     runCoco();
   }, [runCoco]);
 
-  useEffect(() => {
-    if (postureStatus) {
-      alert(`Posture is ${postureStatus}`);
-    }
-  }, [postureStatus]);
+  // useEffect(() => {
+  //   if (postureStatus) {
+  //     alert(`Posture is ${postureStatus}`);
+  //   }
+  // }, [postureStatus]);
 
-  return <div className="PostureDetect"></div>;
+  return <div className="PostureDetect">{postureStatus}</div>;
 }
 
 export default PostureDetect;

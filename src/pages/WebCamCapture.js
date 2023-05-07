@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
 
-function WebCamCapture(onImageCapture) {
+function WebCamCapture({onImageCapture}) {
   const [intervalId, setIntervalId] = useState(null);
   const [video, setVideo] = useState(null);
   const [captureChecked, setCaptureChecked] = useState(false);
+  const [backValue, setBackValue] = useState(50);
+
+  const handleBackSliderChange = (event) => { 
+    setBackValue(event.target.value); 
+  }
 
   const handleCaptureCheckboxChange = (event) => {
     setCaptureChecked(event.target.checked);
@@ -29,9 +34,9 @@ function WebCamCapture(onImageCapture) {
             canvas.height = currentVideo.videoHeight;
             ctx.drawImage(currentVideo, 0, 0, canvas.width, canvas.height);
             const currentImage = canvas.toDataURL("image/png");
-            console.log(onImageCapture);
+            // console.log(typeof onImageCapture);
             console.log(currentImage);
-            onImageCapture = currentImage;
+            onImageCapture(currentImage);
           }, 5000); // capture an image every 5 seconds
           setIntervalId(currentIntervalId);
         })
@@ -67,7 +72,15 @@ function WebCamCapture(onImageCapture) {
           className="preference-icon"
         />
         <h2>Posture Reminders</h2>
-
+        <input
+              type="range"
+              min="1"
+              max="100"
+              value={backValue}
+              className="slider"
+              onChange={handleBackSliderChange}
+            />
+            <span className="slider-value">{backValue}</span>
         <label className="toggle-switch">
           <input
             id="capture-checkbox"

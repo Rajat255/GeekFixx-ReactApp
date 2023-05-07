@@ -14,6 +14,8 @@ function Dashboard() {
   let occupation = localStorage.getItem("occupation");
   let gender = localStorage.getItem("gender");
 
+  const [postureStatus, setPostureStatus] = useState("");
+
   // Logout
   const navigate = useNavigate();
   const handleLogout = () => {
@@ -24,12 +26,14 @@ function Dashboard() {
   //
   // Back Care/ Posture Detection...........................
 
+
   //
   // Ear Care...............................................
   const [earValue, setEarValue] = useState(50);
   const handleEarSliderChange = (event) => {
     setEarValue(event.target.value);
   };
+
 
   //
   // Eye Care...............................................
@@ -156,7 +160,7 @@ function Dashboard() {
     <>
       <Header />
       <Navbar />
-      <div classNameName="dashboard-container">
+      <div className="dashboard-container">
         <div className="user-details">
           <img src="/images/id.svg" alt="user-image" className="user-image" />
           <div id="user-info">
@@ -179,8 +183,19 @@ function Dashboard() {
 
         <div className="preferences">
           <h1>Preferences</h1>
-          <WebCamCapture></WebCamCapture>
+
           {/* BackCare */}
+
+          <WebCamCapture>
+            {(currentImage) => (
+              <PostureDetect
+                currentImage={currentImage}
+                postureStatus={postureStatus}
+                setPostureStatus={setPostureStatus}
+              />
+            )}
+          </WebCamCapture>
+          <div>Posture Status: {postureStatus}</div>
 
           {/* EarCare */}
           <div className="preference-item">
@@ -300,7 +315,6 @@ function Dashboard() {
               <span className="slide round"></span>
             </label>
           </div>
-          <PostureDetect></PostureDetect>
         </div>
       </div>
     </>
