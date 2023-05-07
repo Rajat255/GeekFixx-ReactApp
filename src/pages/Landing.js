@@ -55,9 +55,9 @@ const Landing = () => {
         </div>
         <Link to={"/form"}>
           <div>
-            <a href="/source/form.html" className="btn">
+            <button className="btn">
               Get Started
-            </a>
+            </button>
           </div>
         </Link>
       </div>
