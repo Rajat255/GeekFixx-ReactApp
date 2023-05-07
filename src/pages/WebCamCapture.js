@@ -64,13 +64,13 @@ function WebCamCapture(onImageCapture) {
         <img
           src="/images/back.svg"
           alt="Posture icon"
-          class="preference-icon"
+          className="preference-icon"
         />
         <h2>Posture Reminders</h2>
 
         <label className="toggle-switch">
           <input
-            id="captu-checkbox"
+            id="capture-checkbox"
             type="checkbox"
             checked={captureChecked}
             onChange={handleCaptureCheckboxChange}
