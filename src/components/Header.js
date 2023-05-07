@@ -2,12 +2,12 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div class="header-container">
-      <header class="header">
+    <div className="header-container">
+      <header className="header">
         <a href="/dashboard">
-          <div class="logo">
+          <div className="logo">
             <img src="/images/favicon-32x32.png" alt="logo-img" />
-            <span class="logo-title">GeekFixx</span>
+            <span className="logo-title">GeekFixx</span>
           </div>
         </a>
       </header>
