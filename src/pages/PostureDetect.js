@@ -6,6 +6,7 @@ function PostureDetect({ currentImage }) {
   const [postureStatus, setPostureStatus] = useState(null);
 
   const detect = async (net, currentImage) => {
+    if (!currentImage) return;
     const img = tf.browser.fromPixels(currentImage);
     const resized = tf.image.resizeBilinear(img, [640, 480]);
     const casted = resized.cast("int32");
