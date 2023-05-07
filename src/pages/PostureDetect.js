@@ -2,8 +2,8 @@ import React, { useRef, useState, useEffect, useCallback } from "react";
 import * as tf from "@tensorflow/tfjs";
 import WebCamCapture from "./WebCamCapture.js";
 
-function PostureDetect({ currentImage, postureStatus, setPostureStatus }) {
-  
+function PostureDetect({ currentImage }) {
+  const [postureStatus, setPostureStatus] = useState(null);
 
   const detect = async (net, currentImage) => {
     if (!currentImage) return;
@@ -25,7 +25,7 @@ function PostureDetect({ currentImage, postureStatus, setPostureStatus }) {
 
     // Determine posture status
     let status = null;
-    if (scores[0][0] > 0.5) {
+    if (scores[0][0] > 0.8) {
       status = "good";
     } else {
       status = "bad";
@@ -41,25 +41,23 @@ function PostureDetect({ currentImage, postureStatus, setPostureStatus }) {
       "https://geekfixx-model1.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json"
     );
 
-    // Loop and detect hands using requestAnimationFrame()
-    const loop = async () => {
-      await detect(net, currentImage);
-      requestAnimationFrame(loop);
-    };
-    loop();
+    // Loop and detect hands
+    setInterval(() => {
+      detect(net, currentImage);
+    }, 16.7);
   }, [currentImage]);
 
   useEffect(() => {
     runCoco();
   }, [runCoco]);
+console.log(postureStatus);
+  useEffect(() => {
+    if (postureStatus) {
+      alert(`Posture is ${postureStatus}`);
+    }
+  }, [postureStatus]);
 
-  // useEffect(() => {
-  //   if (postureStatus) {
-  //     alert(`Posture is ${postureStatus}`);
-  //   }
-  // }, [postureStatus]);
-
-  return <div className="PostureDetect">{postureStatus}</div>;
+  return <div className="PostureDetect"></div>;
 }
 
 export default PostureDetect;
