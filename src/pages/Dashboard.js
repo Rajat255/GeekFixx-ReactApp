@@ -156,15 +156,15 @@ function Dashboard() {
     <>
       <Header />
       <Navbar />
-      <div className="dashboard-container">
-        <div class="user-details">
-          <img src="/images/id.svg" alt="user-image" class="user-image" />
+      <div classNameName="dashboard-container">
+        <div className="user-details">
+          <img src="/images/id.svg" alt="user-image" className="user-image" />
           <div id="user-info">
             <h2>Welcome {name}!</h2>
             <h3>Age: {age}</h3>
             <h3>Gender: {gender}</h3>
             <h3>Occupation: {occupation}</h3>
-            <div class="form-group">
+            <div className="form-group">
               <button
                 type="button"
                 id="logout"
@@ -177,59 +177,59 @@ function Dashboard() {
           </div>
         </div>
 
-        <div class="preferences">
+        <div className="preferences">
           <h1>Preferences</h1>
           <WebCamCapture></WebCamCapture>
           {/* BackCare */}
 
           {/* EarCare */}
-          <div class="preference-item">
-            <img src="/images/ear.svg" alt="Ear icon" class="preference-icon" />
+          <div className="preference-item">
+            <img src="/images/ear.svg" alt="Ear icon" className="preference-icon" />
             <h2> Ear Care Reminders</h2>
             <input
               type="range"
               min="1"
               max="100"
               value={earValue}
-              class="slider"
+              className="slider"
               onChange={handleEarSliderChange}
             />
-            <span class="slider-value">{earValue}</span>
-            <label class="toggle-switch">
+            <span className="slider-value">{earValue}</span>
+            <label className="toggle-switch">
               <input type="checkbox" />
-              <span class="slide round"></span>
+              <span className="slide round"></span>
             </label>
           </div>
 
           {/* EyeCare */}
-          <div class="preference-item">
-            <img src="/images/eye.svg" alt="Ear icon" class="preference-icon" />
+          <div className="preference-item">
+            <img src="/images/eye.svg" alt="Ear icon" className="preference-icon" />
             <h2> Eye Care Reminders</h2>
             <input
               type="range"
               min="1"
               max="100"
               value={eyeValue}
-              class="slider"
+              className="slider"
               onChange={handleEyeSliderChange}
             />
-            <span class="slider-value">{eyeValue}</span>
-            <label class="toggle-switch">
+            <span className="slider-value">{eyeValue}</span>
+            <label className="toggle-switch">
               <input
                 type="checkbox"
                 checked={isEyeChecked}
                 onChange={handleEyeChange}
               />
-              <span class="slide round"></span>
+              <span className="slide round"></span>
             </label>
           </div>
 
           {/* DeviceCare */}
-          <div class="preference-item">
+          <div className="preference-item">
             <img
               src="/images/battery.svg"
               alt="Battery icon"
-              class="preference-icon"
+              className="preference-icon"
             />
             <h2> Charging Reminders</h2>
             <input
@@ -237,26 +237,26 @@ function Dashboard() {
               min="1"
               max="100"
               value={batteryValue}
-              class="slider"
+              className="slider"
               onChange={handleChargingSliderChange}
             />
-            <span class="slider-value">{batteryValue}</span>
-            <label class="toggle-switch">
+            <span className="slider-value">{batteryValue}</span>
+            <label className="toggle-switch">
               <input
                 type="checkbox"
                 checked={isDeviceChecked}
                 onChange={handleDeviceChange}
               />
-              <span class="slide round"></span>
+              <span className="slide round"></span>
             </label>
           </div>
 
           {/* StressCare */}
-          <div class="preference-item">
+          <div className="preference-item">
             <img
               src="/images/stress.svg"
               alt="Stress icon"
-              class="preference-icon"
+              className="preference-icon"
             />
             <h2>Distracting Videos</h2>
             <input
@@ -264,22 +264,22 @@ function Dashboard() {
               min="1"
               max="100"
               value={distractingVideosValue}
-              class="slider"
+              className="slider"
               onChange={handleDistractingVideosSliderChange}
             />
-            <span class="slider-value">{distractingVideosValue}</span>
-            <label class="toggle-switch">
+            <span className="slider-value">{distractingVideosValue}</span>
+            <label className="toggle-switch">
               <input type="checkbox" />
-              <span class="slide round"></span>
+              <span className="slide round"></span>
             </label>
           </div>
 
           {/* Water */}
-          <div class="preference-item">
+          <div className="preference-item">
             <img
               src="/images/water.svg"
               alt="Water icon"
-              class="preference-icon"
+              className="preference-icon"
             />
             <h2> Water Reminders</h2>
             <input
@@ -287,17 +287,17 @@ function Dashboard() {
               min="1"
               max="100"
               value={waterValue}
-              class="slider"
+              className="slider"
               onChange={handleWaterSliderChange}
             />
-            <span class="slider-value">{waterValue}</span>
-            <label class="toggle-switch">
+            <span className="slider-value">{waterValue}</span>
+            <label className="toggle-switch">
               <input
                 type="checkbox"
                 checked={isWaterChecked}
                 onChange={handleWaterChange}
               />
-              <span class="slide round"></span>
+              <span className="slide round"></span>
             </label>
           </div>
           <PostureDetect></PostureDetect>

@@ -60,7 +60,7 @@ function WebCamCapture(onImageCapture) {
       />
       <label htmlFor="capture-checkbox">Capture images</label> */}
 
-      <div class="preference-item">
+      <div className="preference-item">
         <img
           src="/images/back.svg"
           alt="Posture icon"
@@ -68,14 +68,14 @@ function WebCamCapture(onImageCapture) {
         />
         <h2>Posture Reminders</h2>
 
-        <label class="toggle-switch">
+        <label className="toggle-switch">
           <input
             id="captu-checkbox"
             type="checkbox"
             checked={captureChecked}
             onChange={handleCaptureCheckboxChange}
           />
-          <span class="slide round"></span>
+          <span className="slide round"></span>
         </label>
       </div>
     </div>
