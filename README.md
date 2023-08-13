@@ -7,8 +7,17 @@ The App will monitor your posture and remind you to correct it when it goes bad,
 
 ## Give it a try yourself!
 ![PageDashboard](https://github.com/Rajat255/GeekFixx-ReactApp/assets/78610455/84ce0aff-dfb6-4cc3-a188-6f9c150ea90e)
-The User Dashboard
+#### The User Dashboard
+This is where all the customization happens
+
 ![PageAchievements](https://github.com/Rajat255/GeekFixx-ReactApp/assets/78610455/f88b8d0b-5df9-4464-8b73-e32dff1832c6)
-Users Achievments
-![BackCareStats](https://github.com/Rajat255/GeekFixx-ReactApp/assets/78610455/5aa06aa9-e9fc-4a57-91c7-7ee914f356d6) ![EyeCareStats](https://github.com/Rajat255/GeekFixx-ReactApp/assets/78610455/15cd4e45-5ce7-49ee-a2c9-68e7db019741)
-Users Statistics
+#### Users Achievments
+Where you see all the good things the app has helped you to achieve
+
+![BackCareStats](https://github.com/Rajat255/GeekFixx-ReactApp/assets/78610455/5aa06aa9-e9fc-4a57-91c7-7ee914f356d6)
+![EyeCareStats](https://github.com/Rajat255/GeekFixx-ReactApp/assets/78610455/15cd4e45-5ce7-49ee-a2c9-68e7db019741)
+#### Users Statistics
+View how have you fared in past and learn where you should focus
+
+
+To run the app clone the repo, run npm install and npm start.
